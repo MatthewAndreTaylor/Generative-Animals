@@ -14,7 +14,7 @@ Some generations have artifacts (extra ears on rabbits, missing fins on turtles,
 
 Most of my training was done in the train.ipynb notebook. The dataloaders num_workers option seemed to have a significant slowdown when working in the notebook. An optimization I made was to apply the transforms ahead of time and then pin the memory. This optimization had a positive impact on training speed. Another approach that could be used would be to generate pseudo-random prompts, then use existing models to generate images, then mask the images and convert them to SVG.
 
-Examples found at [my site]().
+Examples found at [my site](https://matthewandretaylor.github.io/Generative-Animals).
 
 The classes I chose to use were
 
