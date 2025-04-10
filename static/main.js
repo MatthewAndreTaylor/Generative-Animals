@@ -8,7 +8,7 @@ function generateCarousel(ids_to_label, containerId) {
               .map(
                 (imageSrc) => `
                       <li class="glide__slide">
-                        <img class="gimg" src="https://drive.google.com/thumbnail?id=${imageSrc}" alt="${containerId} image" width=80 height=80 loading="lazy" />
+                        <img class="gimg" src="https://lh3.googleusercontent.com/d/${imageSrc}=s220?authuser=0" alt="${containerId} image" loading="lazy" />
                       </li>
                   `,
               )
@@ -16,15 +16,11 @@ function generateCarousel(ids_to_label, containerId) {
           </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="Previous slide">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="previous">
+            <svg fill="none" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
           </button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="Next slide">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="next">
+            <svg fill="none" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
           </button>
         </div>
       </div>
@@ -42,8 +38,6 @@ for (const key in fileIdsByLabel) {
   var glide = new Glide(`#${key}-glide`, {
     type: "carousel",
     perView: 5,
-    focusAt: "center",
-    duration: 0.1,
     breakpoints: {
       600: {
         perView: 3,

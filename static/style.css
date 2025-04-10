@@ -31,6 +31,8 @@ body {
 }
 .gimg {
   border-radius: 10px;
+  width: 80px;
+  height: 80px;
 }
 ul.animal-list {
   padding-left: 1.5rem;
