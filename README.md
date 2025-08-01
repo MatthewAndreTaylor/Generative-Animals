@@ -4,6 +4,12 @@
 
 Using a lightweight diffusion model, the goal was to generate small animal images. The images could be upsampled using super-resolution and converted to SVG to make stickers or art assets for a game. The goal was to create animal breeds that do not exist in the real world but are realistic-looking.
 
+| | | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+| <img width="64" height="64" alt="bird" src="https://github.com/user-attachments/assets/a9276326-b60a-4f45-b7ba-4e05f65d56c5" /> | <img width="64" height="64" alt="cat" src="https://github.com/user-attachments/assets/2ceee81d-ae6a-4a02-8b17-f23eb44a605f" /> | <img width="64" height="64" alt="dog" src="https://github.com/user-attachments/assets/4003b312-4eb1-4fa2-bd27-abe5955c5c3d" /> | <img width="64" height="64" alt="fish" src="https://github.com/user-attachments/assets/22b00336-2b80-4394-b552-a2cbcf14630c" /> |
+<img width="64" height="64" alt="frog" src="https://github.com/user-attachments/assets/1037b0f8-2543-44b4-8854-830478358251" /> | <img width="64" height="64" alt="rabbit" src="https://github.com/user-attachments/assets/218c953a-94ab-4036-9cb9-f1b633811753" /> | <img width="64" height="64" alt="horse" src="https://github.com/user-attachments/assets/5727d19e-0c21-4fb1-86c5-c907e4515c4a" /> | <img width="64" height="64" alt="turtle" src="https://github.com/user-attachments/assets/c137baba-de43-47bb-b535-eb5d31957ccc" />
+
+
 I decided not to use a VQVAE since in experiments it did speed up training time when pre-saving latents; however, reconstructions were not perfect, and my dataset was fairly small (8 classes, 512 images for training per class) in comparison to datasets like CIFAR-10 (10 classes and 5000 images for training per class). The latent space did not have the best distribution, so the new generation could have more unexpected artifacts.
 
 I also decided on not using EMA because it slowed down training time and increased the code complexity. For this example, I wanted to demonstrate generating images with as little code as possible while still keeping a reasonable fidelity of generated images.
