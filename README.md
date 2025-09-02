@@ -1,5 +1,7 @@
 # Generative Animals
 
+https://github.com/user-attachments/assets/b013e85c-585c-43c5-8c96-34e3c42c4e32
+
 ## Overview
 
 Using a lightweight diffusion model, the goal was to generate small animal images. The images could be upsampled using super-resolution and converted to SVG to make stickers or art assets for a game. The goal was to create animal breeds that do not exist in the real world but are realistic-looking.
