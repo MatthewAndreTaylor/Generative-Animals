@@ -16,7 +16,7 @@ I decided not to use a VQVAE since in experiments it did speed up training time 
 
 I also decided on not using EMA because it slowed down training time and increased the code complexity. For this example, I wanted to demonstrate generating images with as little code as possible while still keeping a reasonable fidelity of generated images.
 
-When gathering images for my datasets, I noticed a lack of diversity of tools for creating image datasets. I created my own Flask utility apps for ranking images in the dataset and merging new data points when the existing data did not satisfy my needs. Gathering the training data was a slow task. I hope to see more support for gathering data in the future. The dataset I used was not perfect, and there is definitely work that could be done to improve it in the future.
+I privately collected and pre-processed the images for the animal dataset myself. When gathering images for my dataset, I noticed a lack of diversity of tools for creating image datasets. I created my own Flask utility apps for ranking images in the dataset and merging new data points when the existing data did not satisfy my needs. Gathering the training data was a slow task. I hope to see more support for gathering data in the future. The dataset I used was not perfect, and there is definitely work that could be done to improve it in the future.
 
 Some generations have artifacts (extra ears on rabbits, missing fins on turtles, smudged faces on dogs). Some of these artifacts seemed to come from my dataset, but other artifacts seem to be consequences of using a diffusion network.
 
