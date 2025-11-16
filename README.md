@@ -6,6 +6,8 @@ https://github.com/user-attachments/assets/b013e85c-585c-43c5-8c96-34e3c42c4e32
 
 Using a lightweight diffusion model, the goal was to generate small animal images. The images could be upsampled using super-resolution and converted to SVG to make stickers or art assets for a game. The goal was to create animal breeds that do not exist in the real world but are realistic-looking.
 
+### Examples
+
 | | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
 | <img width="64" height="64" alt="bird" src="https://github.com/user-attachments/assets/a9276326-b60a-4f45-b7ba-4e05f65d56c5" /> | <img width="64" height="64" alt="cat" src="https://github.com/user-attachments/assets/2ceee81d-ae6a-4a02-8b17-f23eb44a605f" /> | <img width="64" height="64" alt="dog" src="https://github.com/user-attachments/assets/4003b312-4eb1-4fa2-bd27-abe5955c5c3d" /> | <img width="64" height="64" alt="fish" src="https://github.com/user-attachments/assets/22b00336-2b80-4394-b552-a2cbcf14630c" /> |
@@ -22,7 +24,7 @@ Some generations have artifacts (extra ears on rabbits, missing fins on turtles,
 
 Most of my training was done in the train.ipynb notebook. The dataloaders num_workers option seemed to have a significant slowdown when working in the notebook. An optimization I made was to apply the transforms ahead of time and then pin the memory. This optimization had a positive impact on training speed. Another approach that could be used would be to generate pseudo-random prompts, then use existing models to generate images, then mask the images and convert them to SVG.
 
-Examples found at [my site](https://matthewandretaylor.github.io/Generative-Animals).
+More examples can be found at [my site](https://matthewandretaylor.github.io/Generative-Animals).
 
 The classes I chose to use were
 
